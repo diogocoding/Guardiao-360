@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Ajustes</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="ajustes.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img
+            src="https://i.postimg.cc/28YgB6z9/Gemini-Generated-Image-tr1uhatr1uhatr1u-8.png"
+            alt="Logo"
+            class="logo"
+          />
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-house"></i> <span>Ocorrências</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-file-lines"></i>
+                <span>Relatórios</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-users"></i> <span>Usuários</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+                <span>Auditoria</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="active"
+                ><i class="fa-solid fa-gear"></i> <span>Ajustes</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="#"
+            ><i class="fa-solid fa-right-from-bracket"></i> <span>Sair</span></a
+          >
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div class="settings-card">
+          <div class="card-top-bar">
+            <img
+              src="https://i.postimg.cc/Cx23dpcK/retrato-de-um-bombeiro-em-frente-um-carro-de-bombeiros-1-1.png"
+              alt="Foto de Perfil"
+              class="profile-picture"
+            />
+
+            <i class="fa-solid fa-bell notification-icon-card"></i>
+          </div>
+
+          <form class="settings-grid">
+            <div class="profile-details">
+              <div class="form-group">
+                <label for="nome-completo">Nome Completo</label>
+                <input
+                  type="text"
+                  id="nome-completo"
+                  value="Cleiton Bombeiro"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="seu.email@cbm.com.br" />
+              </div>
+              <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" value="(XX) XXXXX-XXXX" />
+              </div>
+              <div class="form-group">
+                <label for="matricula">Matrícula</label>
+                <input type="text" id="matricula" placeholder="Chave API" />
+              </div>
+            </div>
+
+            <div class="password-security">
+              <div class="form-group">
+                <label for="senha-atual">Senha Atual</label>
+                <div class="password-wrapper">
+                  <input type="password" id="senha-atual" value="••••••••" />
+                  <i class="fa-solid fa-eye-slash"></i>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="nova-senha">Nova Senha</label>
+                <input type="password" id="nova-senha" />
+              </div>
+
+              <button type="button" class="btn-form btn-confirm-pass">
+                Confirmar Nova Senha
+              </button>
+
+              <div class="toggle-switch">
+                <span>Notificações por Email</span>
+                <label class="switch">
+                  <input type="checkbox" checked />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn-form btn-save-changes">
+                Salvar Alterações
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

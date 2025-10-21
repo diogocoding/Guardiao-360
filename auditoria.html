@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Auditoria e Logs</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="auditoria.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img
+            src="https://i.postimg.cc/28YgB6z9/Gemini-Generated-Image-tr1uhatr1uhatr1u-8.png"
+            alt="Logo"
+            class="logo"
+          />
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-house"></i> <span>Ocorrências</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-file-lines"></i>
+                <span>Relatórios</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-users"></i> <span>Usuários</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="active"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+                <span>Auditoria</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-gear"></i> <span>Ajustes</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="#"
+            ><i class="fa-solid fa-right-from-bracket"></i> <span>Sair</span></a
+          >
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <h1>Auditoria e Logs de Ações</h1>
+          <div class="header-actions">
+            <div class="user-profile">
+              <i class="fa-solid fa-bell"></i>
+              <span class="user-greet">Olá, Admin</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="filters-container">
+          <div class="filter-item">
+            <label for="filtro-usuario">Filtrar por Usuário:</label>
+            <select id="filtro-usuario">
+              <option>Selecione o tipo de Usuário</option>
+            </select>
+          </div>
+
+          <div class="filter-item">
+            <label for="filtro-evento">Filtro por Tipo de Evento:</label>
+            <select id="filtro-evento">
+              <option>Selecione o Evento</option>
+            </select>
+          </div>
+
+          <div class="filter-item">
+            <label for="filtro-descricao">Filtro por Descrição da Ação:</label>
+            <input
+              type="text"
+              id="filtro-descricao"
+              placeholder="Digite palavras-chave"
+            />
+          </div>
+
+          <div class="filter-item">
+            <label for="data-inicio">Filtrar por Período:</label>
+            <input
+              type="text"
+              id="data-inicio"
+              placeholder="Data Início: DD/MM/AAAA"
+            />
+          </div>
+
+          <div class="filter-item">
+            <label for="data-final">Filtrar por Período:</label>
+            <input
+              type="text"
+              id="data-final"
+              placeholder="Data Final: DD/MM/AAAA"
+            />
+          </div>
+
+          <div class="filter-item button-group">
+            <button class="btn btn-filter">Aplicar Filtros</button>
+          </div>
+        </section>
+
+        <section class="table-container">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Data/Hora</th>
+                  <th>Usuário</th>
+                  <th>Matrícula</th>
+                  <th>Evento</th>
+                  <th>Detalhes da Ação</th>
+                  <th>ID Ocorrência</th>
+                  <th>IP de Origem</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2023-10-26 09:15:22</td>
+                  <td>admin@cbm.com.br</td>
+                  <td>N/A</td>
+                  <td>LOGIN</td>
+                  <td>Ocorrência #2023-1005 Criada</td>
+                  <td>123456</td>
+                  <td>192.168.1.10</td>
+                </tr>
+                <tr>
+                  <td>2023-10-26 10:05:40</td>
+                  <td>ana.silva@cbm.com.br</td>
+                  <td>00345678</td>
+                  <td>REUNIÃO</td>
+                  <td>Ocorrência #2023-1005 Criada</td>
+                  <td>78910</td>
+                  <td>10.0.0.5</td>
+                </tr>
+                <tr>
+                  <td>2023-10-26 11:20:10</td>
+                  <td>pedro.lins@cbm.com.br</td>
+                  <td>00112233</td>
+                  <td>EDIÇÃO_USUÁRIO</td>
+                  <td>Ocorrência #2024-1234 Criada</td>
+                  <td>11121314</td>
+                  <td>172.16.0.20</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <footer class="pagination-footer">
+            <span class="page-info">Página 1 de 5</span>
+            <div class="page-nav">
+              <button class="btn-nav btn-prev">
+                <i class="fa-solid fa-chevron-left"></i> Anterior
+              </button>
+              <button class="btn-nav btn-next">
+                Próximo <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </footer>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Lista de Ocorrências</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img
+            src="https://i.postimg.cc/28YgB6z9/Gemini-Generated-Image-tr1uhatr1uhatr1u-8.png"
+            alt="Logo"
+            class="logo"
+          />
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="#" class="active"
+                ><i class="fa-solid fa-house"></i> <span>Ocorrências</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-file-lines"></i>
+                <span>Relatórios</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-users"></i> <span>Usuários</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+                <span>Auditoria</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-gear"></i> <span>Ajustes</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#"
+            ><i class="fa-solid fa-right-from-bracket"></i> <span>Sair</span></a
+          >
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <h1>Lista de Ocorrências</h1>
+          <div class="header-actions">
+            <button class="btn btn-primary">
+              <i class="fa-solid fa-plus"></i> Registrar Nova ocorrência
+            </button>
+            <div class="user-profile">
+              <i class="fa-solid fa-bell"></i>
+              <span class="user-greet">Olá, Admin</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="filters-section">
+          <div class="filter-group">
+            <label for="status">Status:</label>
+            <select id="status">
+              <option>Selecione o status</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="periodo">Período:</label>
+            <select id="periodo">
+              <option>Selecione o período</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="regiao">Região:</label>
+            <select id="regiao">
+              <option>Selecione a região</option>
+            </select>
+          </div>
+          <button class="btn btn-filter">Filtrar Informações</button>
+        </section>
+
+        <section class="stats-section">
+          <div class="stat-card abertos">
+            <span class="count">8</span>
+            <span class="label">ABERTOS</span>
+          </div>
+          <div class="stat-card pendentes">
+            <span class="count">1</span>
+            <span class="label">PENDENTES</span>
+          </div>
+          <div class="stat-card cancelados">
+            <span class="count">2</span>
+            <span class="label">CANCELADOS</span>
+          </div>
+          <div class="stat-card concluidos">
+            <span class="count">5</span>
+            <span class="label">CONCLUÍDOS</span>
+          </div>
+        </section>
+
+        <section class="table-section">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Tipo de Ocorrências</th>
+                <th>Status</th>
+                <th>Local</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>
+                  <i class="fa-solid fa-fire-flame-curved icon-red"></i>
+                  Incêndio
+                </td>
+                <td>
+                  <span class="status-pill status-concluido">Concluído</span>
+                </td>
+                <td>Boa Viagem, 158</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><i class="fa-solid fa-faucet icon-red"></i> Incêndio</td>
+                <td>
+                  <span class="status-pill status-concluido">Concluído</span>
+                </td>
+                <td>Rua Saraiva, 50</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>
+                  <i class="fa-solid fa-fire-flame-curved icon-red"></i>
+                  Incêndio
+                </td>
+                <td>
+                  <span class="status-pill status-andamento">Andamento</span>
+                </td>
+                <td>Rua das Flores, 123</td>
+                <td><button class="btn btn-details">Ver Detalhes</button></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>
+                  <i class="fa-solid fa-car-burst icon-red"></i> Acidente
+                  Veicular
+                </td>
+                <td>
+                  <span class="status-pill status-concluido">Concluído</span>
+                </td>
+                <td>Rua dos pinhais, 153</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>
+                  <i class="fa-solid fa-car-burst icon-red"></i> Acidente
+                  Veicular
+                </td>
+                <td>
+                  <span class="status-pill status-cancelado">Cancelado</span>
+                </td>
+                <td>Jaboatão Centro, 206</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><i class="fa-solid fa-person icon-red"></i> Resgate</td>
+                <td>
+                  <span class="status-pill status-concluido">Concluído</span>
+                </td>
+                <td>Ilha do retiro, 87</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>
+                  <i class="fa-solid fa-fire-flame-curved icon-red"></i>
+                  Incêndio
+                </td>
+                <td>
+                  <span class="status-pill status-concluido">Concluído</span>
+                </td>
+                <td>Centro do Recife, 15</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td><i class="fa-solid fa-person icon-red"></i> Resgate</td>
+                <td>
+                  <span class="status-pill status-cancelado">Cancelado</span>
+                </td>
+                <td>Boa Vista, 53</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Operacional</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="dashboard-operacional.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img
+            src="https://i.postimg.cc/28YgB6z9/Gemini-Generated-Image-tr1uhatr1uhatr1u-8.png"
+            alt="Logo"
+            class="logo"
+          />
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-house"></i> <span>Ocorrências</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="active"
+                ><i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-file-lines"></i>
+                <span>Relatórios</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-users"></i> <span>Usuários</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+                <span>Auditoria</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-gear"></i> <span>Ajustes</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="#"
+            ><i class="fa-solid fa-right-from-bracket"></i> <span>Sair</span></a
+          >
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <h1>Dashboard Operacional</h1>
+          <div class="header-actions">
+            <div class="user-profile">
+              <i class="fa-solid fa-bell"></i>
+              <span class="user-greet">Olá, Admin</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="chart-container">
+          <h3 class="chart-title">Ocorrências por mês</h3>
+
+          <div class="chart-placeholder">
+            <div class="bar-group">
+              <div class="bar bar-red" style="height: 150px"></div>
+              <div class="bar bar-blue" style="height: 100px"></div>
+            </div>
+            <div class="bar-group">
+              <div class="bar bar-red" style="height: 120px"></div>
+              <div class="bar bar-green" style="height: 200px"></div>
+              <div class="bar bar-blue" style="height: 250px"></div>
+            </div>
+            <div class="bar-group">
+              <div class="bar bar-red" style="height: 160px"></div>
+              <div class="bar bar-blue" style="height: 140px"></div>
+            </div>
+            <div class="bar-group">
+              <div class="bar bar-red" style="height: 90px"></div>
+              <div class="bar bar-blue" style="height: 120px"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

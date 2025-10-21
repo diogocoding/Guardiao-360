@@ -1,0 +1,190 @@
+/* --- FONTE PRINCIPAL --- */
+body {
+  font-family: "Nunito Sans", "Roboto", Arial, sans-serif;
+}
+
+/* --- TÍTULO DA PÁGINA --- */
+.main-content h1 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #222;
+}
+
+/* --- CONTAINER DO BOTÃO CENTRALIZADO --- */
+.button-container {
+  text-align: center;
+  margin: -15px 0 30px 0; /* Puxa para cima e dá espaço abaixo */
+}
+
+/* --- ESTILO DO BOTÃO "ADICIONAR NOVO USUÁRIO" --- */
+/* Sobrescreve o .btn-primary padrão do dashboard.css */
+.btn-primary.btn-add-user {
+  background: linear-gradient(to bottom, #1a80ff, #0d70ff); /* Gradiente azul */
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  border-radius: 25px; /* Arredondado */
+  box-shadow: 0 4px 12px rgba(13, 112, 255, 0.4); /* Sombra azul */
+  text-transform: none; /* Texto normal, não maiúsculo */
+  transition: all 0.3s ease;
+}
+.btn-primary.btn-add-user:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 112, 255, 0.5);
+}
+.btn-primary.btn-add-user i {
+  margin-right: 10px;
+}
+
+/* --- Seção de Filtros (Layout de Grade) --- */
+.filters-section.user-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas */
+  gap: 20px 25px;
+  padding: 0;
+  background: none;
+  margin-bottom: 25px;
+}
+
+.user-filters .filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-filters .filter-group label {
+  color: #333;
+  margin-bottom: 8px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700; /* Mais destacado */
+  font-size: 0.95rem;
+}
+
+.user-filters .filter-group select {
+  width: 100%;
+  background-color: #313d4f;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem;
+}
+
+/* --- Container da Tabela --- */
+.table-container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* --- TÍTULO DA TABELA (COM ESTILOS DO FIGMA) --- */
+.table-title {
+  padding: 20px 25px;
+  background: #343a40; /* Fundo escuro */
+
+  /* === ESTILOS DO FIGMA === */
+  color: #ffffff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01px;
+  text-transform: none;
+  /* =========================== */
+}
+
+/* --- Wrapper da Tabela (para rolagem horizontal) --- */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* --- ESTILOS DA TABELA --- */
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  padding: 15px 25px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  white-space: nowrap;
+  /* Aplica a fonte correta na tabela */
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.95rem;
+}
+
+.table-container thead tr {
+  background: #343a40;
+  color: white;
+}
+.table-container th {
+  font-weight: 700; /* Header da tabela em negrito */
+}
+
+.table-container tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+.table-container tbody tr:hover {
+  background: #f1f1f1;
+}
+
+/* Status do Usuário */
+.status-inativo {
+  color: #999;
+  font-style: italic;
+}
+
+/* Ações do Usuário */
+.actions a {
+  font-size: 0.85rem;
+  color: #555;
+  text-decoration: underline;
+}
+.actions a:hover {
+  color: #1a73e8;
+}
+
+/* --- Rodapé de Paginação --- */
+.pagination-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background: #f9f9f9;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.page-info {
+  color: #555;
+}
+
+.page-nav a {
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+.page-nav a:hover {
+  background-color: #e9eef8;
+}
+.page-nav a.prev {
+  margin-right: 10px;
+}
+.page-nav a.prev i {
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+.page-nav a.next i {
+  margin-left: 5px;
+  font-size: 0.8rem;
+}

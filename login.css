@@ -1,0 +1,186 @@
+/* --- Configuração Global e Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Roboto", Arial, sans-serif; /* Usando Roboto como exemplo */
+}
+
+/* --- Estilo Principal do Corpo (Background) --- */
+body {
+  /* Cores extraídas de image_dec251.png */
+  background: linear-gradient(197deg, #790909, #a20909);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* --- Container Principal (Layout de Duas Colunas) --- */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px; /* Largura total baseada no 1440px da sua imagem */
+  width: 100%;
+  gap: 60px;
+}
+
+/* --- Seção da Marca (Direita) --- */
+.branding-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  /* Ajuste o tamanho conforme sua imagem real */
+  width: 220px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.brand-name {
+  /* Gradiente de texto com cores de image_dec252.png */
+  background: linear-gradient(to bottom, #efff09, #bf9905);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Seção do Formulário (Esquerda) --- */
+.login-form-wrapper {
+  flex: 1;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.login-form-wrapper h1 {
+  font-size: 2rem;
+  color: #0b0101; /* Cor de image_dec252.png */
+  margin-bottom: 5px;
+}
+
+.login-form-wrapper .subtitle {
+  color: #808080; /* Cor de image_dec252.png */
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 0.9rem;
+  color: #333333; /* Cor de image_dec252.png */
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #d5d5d5; /* Cor de image_dec252.png */
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+form input::placeholder {
+  color: #808080;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Estiliza o label do checkbox para ficar alinhado */
+.options label {
+  margin: 0 0 0 8px;
+  font-size: 0.9rem;
+  color: #808080;
+  font-weight: normal;
+}
+
+form button[type="submit"] {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #313d4f; /* Cor de image_dec252.png */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background: #001f3f; /* Cor de image_dec252.png */
+}
+
+.forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #313d4f;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 768px) {
+  .login-container {
+    /* Inverte a ordem e coloca em coluna */
+    flex-direction: column-reverse;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .branding-wrapper {
+    margin-bottom: 0;
+  }
+
+  .logo {
+    width: 150px; /* Logo menor em telas pequenas */
+  }
+
+  .brand-name {
+    font-size: 2.5rem; /* Título menor */
+  }
+
+  .login-form-wrapper {
+    max-width: 100%;
+    width: 100%;
+    padding: 30px;
+  }
+}

@@ -1,0 +1,276 @@
+/* --- Ajustes no Cabeçalho --- */
+.main-header.details-header {
+  /* Alinha o perfil de usuário com o botão */
+  align-items: flex-start;
+}
+
+.header-title-group {
+  margin-bottom: 10px;
+}
+
+.occurrence-id {
+  font-size: 1.5rem;
+  color: #555;
+  font-weight: 700;
+}
+
+.details-header .header-actions {
+  /* Garante que o botão e o perfil fiquem alinhados */
+  align-items: center;
+}
+
+/* --- Layout Principal (Grid de 2 Colunas) --- */
+.details-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Coluna da esquerda 2x maior que a da direita */
+  gap: 25px;
+}
+
+/* --- Estilo Padrão dos Cards --- */
+.info-card {
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  margin-bottom: 25px; /* Espaço entre cards empilhados */
+}
+
+.info-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+/* --- Card: Informações Principais --- */
+.info-principal .info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas de info */
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.85rem;
+  color: #777;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.info-value {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.status-atendimento {
+  background-color: #e67e22; /* Laranja */
+}
+
+/* --- Card: Localização --- */
+.card-localizacao .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.refresh-icon {
+  font-size: 1.5rem;
+  color: #1a73e8; /* Azul */
+  cursor: pointer;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.address {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Botão Secundário (Cinza) */
+.btn-secondary {
+  width: 100%;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  background: #f1f1f1;
+  color: #333;
+  border: 1px solid #ddd;
+}
+.btn-secondary:hover {
+  background: #e9e9e9;
+}
+.btn-secondary i {
+  margin-right: 8px;
+}
+
+/* --- Card: Mídias e Anexos --- */
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.media-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.8rem;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+.media-item:hover {
+  background: #f9f9f9;
+}
+
+.media-thumbnail {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  margin-bottom: 8px;
+}
+
+.media-icon {
+  font-size: 3rem;
+  color: #777;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+.fa-file-audio {
+  color: #1a73e8;
+}
+.fa-file-pdf {
+  color: #e74c3c;
+}
+
+/* --- Card: Timeline --- */
+.timeline-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline-list li {
+  font-size: 0.95rem;
+  color: #444;
+  padding: 8px 0;
+  border-bottom: 1px dashed #f0f0f0;
+}
+.timeline-list li:last-child {
+  border-bottom: none;
+}
+.timeline-list li strong {
+  color: #111;
+  margin-right: 5px;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 1200px) {
+  .details-grid {
+    grid-template-columns: 1fr; /* Coluna única em telas menores */
+  }
+
+  .info-principal .info-grid {
+    grid-template-columns: 1fr; /* Coluna única para infos */
+  }
+
+  .media-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas para mídias */
+  }
+}
+
+@media (max-width: 992px) {
+  /* Ajustes para quando o menu encolher (vindo do dashboard.css) */
+  .details-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Ajustes para celular (vindo do dashboard.css) */
+  .media-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 colunas para mídias no celular */
+  }
+}
+/* --- CORREÇÃO: Fundo Cinza e Posição --- */
+/* Isto irá sobrescrever o 'background: #ffffff' 
+  que está vindo do 'dashboard.css'
+*/
+.main-content {
+  background-color: #f4f7fa; /* Um cinza claro suave (ou use #D9D9D9) */
+  position: relative; /* Necessário para o ícone flutuante */
+  padding-bottom: 120px; /* Adiciona espaço no final para o ícone */
+}
+
+/* --- ESTILO DO ÍCONE FLUTUANTE --- */
+/*
+  Este é o estilo para a "seta" que você mencionou
+*/
+.floating-action-icon {
+  position: absolute; /* Flutua sobre o main-content */
+  bottom: 40px;
+  left: 40px;
+
+  width: 70px; /* Largura do círculo */
+  height: 70px; /* Altura do círculo */
+
+  background-color: #ffffff;
+  color: #1a73e8; /* Cor do ícone (azul, como na imagem) */
+
+  border-radius: 50%; /* Faz ser um círculo perfeito */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra do card */
+
+  /* Para centralizar o ícone <i ...> dentro do círculo <a> */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.5rem; /* Tamanho do ícone */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.floating-action-icon:hover {
+  transform: scale(1.05); /* Efeito de zoom */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}

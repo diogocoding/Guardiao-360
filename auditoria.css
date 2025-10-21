@@ -1,0 +1,165 @@
+/* --- Fonte Principal (Consistência) --- */
+body {
+    font-family: 'Nunito Sans', 'Roboto', Arial, sans-serif;
+}
+
+/* --- Fundo Cinza (Corrigindo a diferença da imagem) --- */
+.main-content {
+    background-color: #f4f7fa; /* Fundo cinza claro */
+}
+
+/* --- Título da Página --- */
+.main-content h1 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #222;
+}
+
+/* --- Container de Filtros --- */
+.filters-container {
+    background: #E8E8E8; /* Fundo cinza da caixa de filtro */
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 25px;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-item label {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.filter-item select,
+.filter-item input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.95rem;
+}
+
+/* Estilo dos inputs escuros */
+.filter-item input[placeholder*="Data"] {
+    background-color: #313D4F;
+    color: white;
+    border: none;
+}
+.filter-item input[placeholder*="Data"]::placeholder {
+    color: #a9a9a9;
+}
+
+/* Alinhamento do botão de filtro */
+.filter-item.button-group {
+    justify-content: flex-end; /* Alinha o botão na base */
+}
+
+button.btn-filter {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background: #1a73e8; /* Azul */
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button.btn-filter:hover {
+    background: #105cba;
+}
+
+
+/* --- Container da Tabela --- */
+.table-container {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden; /* Garante que o border-radius funcione */
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    background: #ffffff;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilo genérico para células */
+.table-container th,
+.table-container td {
+    padding: 15px 20px;
+    text-align: left;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.9rem;
+}
+
+.table-container thead tr {
+    background: #343a40; /* Fundo escuro */
+}
+
+/* Células do Cabeçalho (th) */
+.table-container th {
+    color: white; /* Fonte branca */
+} /* <--- ESTE '}' ESTAVA FALTANDO */
+
+/* Células do Corpo (td) */
+.table-container td {
+    color: #333; /* Fonte escura para o conteúdo */
+    border-bottom: 1px solid #eee;
+}
+
+/* --- Rodapé de Paginação --- */
+.pagination-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #E8E8E8; /* Fundo cinza */
+    font-size: 0.9rem;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.page-info {
+    color: #333;
+    font-weight: 700;
+}
+
+.page-nav {
+    display: flex;
+    gap: 10px; /* Adiciona espaço entre os botões */
+}
+
+/*
+ * Estilos para os botões "pill"
+ * (como no design image_dc8b57.png) 
+ */
+.btn-nav {
+    background: #1F2A38; /* Cor escura do design */
+    color: white;
+    border: none;
+    padding: 10px 22px; 
+    
+    /* A mudança principal para o formato "pill" */
+    border-radius: 50px; 
+    
+    cursor: pointer;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size:

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Gestão de Usuários</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="gestao-usuarios.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <img
+            src="https://i.postimg.cc/28YgB6z9/Gemini-Generated-Image-tr1uhatr1uhatr1u-8.png"
+            alt="Logo"
+            class="logo"
+          />
+        </div>
+        <nav class="sidebar-nav">
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-house"></i> <span>Ocorrências</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-file-lines"></i>
+                <span>Relatórios</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="active"
+                ><i class="fa-solid fa-users"></i> <span>Usuários</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+                <span>Auditoria</span></a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-gear"></i> <span>Ajustes</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="#"
+            ><i class="fa-solid fa-right-from-bracket"></i> <span>Sair</span></a
+          >
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="main-header">
+          <h1>Gestão de Usuários</h1>
+          <div class="header-actions">
+            <div class="user-profile">
+              <i class="fa-solid fa-bell"></i>
+              <span class="user-greet">Olá, Admin</span>
+            </div>
+          </div>
+        </header>
+
+        <section class="button-container">
+          <button class="btn btn-primary btn-add-user">
+            <i class="fa-solid fa-plus"></i> Adicionar Novo Usuário
+          </button>
+        </section>
+        <section class="filters-section user-filters">
+          <div class="filter-group">
+            <label for="perfil">Perfil/Acesso:</label>
+            <select id="perfil">
+              <option>Selecione o Perfil</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="unidade">Unidade/Lotação:</label>
+            <select id="unidade">
+              <option>Selecione sua Unidade</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="status">Status:</label>
+            <select id="status">
+              <option>Selecione o status</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="posto">Posto/Graduação:</label>
+            <select id="posto">
+              <option>Selecione o Posto / Graduação</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="table-container">
+          <h3 class="table-title">Registro de Usuários do Sistema</h3>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome Completo</th>
+                  <th>Matrícula</th>
+                  <th>Posto / Graduação</th>
+                  <th>Unidade / Lotação</th>
+                  <th>Perfil</th>
+                  <th>Status</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pedro Alcântara</td>
+                  <td>00123456</td>
+                  <td>Coronel</td>
+                  <td>QG - Comando Geral</td>
+                  <td>ADM</td>
+                  <td class="status-ativo">Ativo</td>
+                  <td class="actions">
+                    <a href="#">Editar</a> / <a href="#">Redefinir</a> /
+                    <a href="#">Excluir</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ana Luiza Santos</td>
+                  <td>00298765</td>
+                  <td>Capitã</td>
+                  <td>1º BBM (Zona Sul)</td>
+                  <td>Chefe / Supervisor</td>
+                  <td class="status-ativo">Ativo</td>
+                  <td class="actions">
+                    <a href="#">Editar</a> / <a href="#">Redefinir</a> /
+                    <a href="#">Excluir</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>João Victor Souza</td>
+                  <td>00355443</td>
+                  <td>1º Sargento</td>
+                  <td>DAT (Engenharia)</td>
+                  <td>Analista</td>
+                  <td class="status-ativo">Ativo</td>
+                  <td class="actions">
+                    <a href="#">Editar</a> / <a href="#">Redefinir</a> /
+                    <a href="#">Excluir</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Lucas Ferreira Costa</td>
+                  <td>00478901</td>
+                  <td>Soldado</td>
+                  <td>2º BBM (Zona Norte)</td>
+                  <td>Padrão / Operacional</td>
+                  <td class="status-ativo">Ativo</td>
+                  <td class="actions">
+                    <a href="#">Editar</a> / <a href="#">Redefinir</a> /
+                    <a href="#">Excluir</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Marta Oliveira Dias</td>
+                  <td>00565656</td>
+                  <td>Cabo</td>
+                  <td>DTI (Suporte)</td>
+                  <td>Analista</td>
+                  <td class="status-inativo">Inativo</td>
+                  <td class="actions">
+                    <a href="#">Editar</a> / <a href="#">Redefinir</a> /
+                    <a href="#">Excluir</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Fernada Cibelly</td>
+                  <td>00636958</td>
+                  <td>Sargento</td>
+                  <td>CBMPE</td>
+                  <td>Analista</td>
+                  <td class="status-ativo">Ativo</td>
+                  <td class="actions">
+                    <a href="#">Editar</a> / <a href="#">Redefinir</a> /
+                    <a href="#">Excluir</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <footer class="pagination-footer">
+            <span class="page-info">Página 1 de 5</span>
+            <div class="page-nav">
+              <a href="#" class="prev"
+                ><i class="fa-solid fa-chevron-left"></i> Anterior</a
+              >
+              <a href="#" class="next"
+                >Próxima <i class="fa-solid fa-chevron-right"></i
+              ></a>
+            </div>
+          </footer>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
