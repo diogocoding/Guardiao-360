@@ -46,9 +46,6 @@ Até o momento, as seguintes telas estáticas foram desenvolvidas, servindo como
 
 Como este é um projeto front-end estático (apenas HTML/CSS), não há necessidade de instalação de dependências ou de um servidor.
 
-1.  Clone este repositório:
-    ```bash
-    git clone [URL_DO_SEU_REPOSITORIO]
-    ```
+1.  Clone este repositório
 2.  Navegue até a pasta do projeto.
 3.  Abra qualquer um dos arquivos `.html` (por exemplo, `login.html`) diretamente no seu navegador de preferência.
